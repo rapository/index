@@ -40,11 +40,16 @@ export default function Home({ data }) {
 
       <main className={styles.main}>
         <h1 className={styles.title}>Welcome to Rapository</h1>
-        
+        <table>
+          <tr>
+            <th>Rank</th>
+            <th>Artist</th>
+            <th>Monthly Listeners</th>
+          </tr>
         {
-          data.map((artist) => <p>{artist.artist}</p>)
+          data.map((artist) => <tr><td>{artist.rank}</td><td>{artist.artist}</td><td>{artist.monthlyListeners} M</td></tr>)
         }
-
+        </table>
       </main>
 
       <footer className={styles.footer}>
